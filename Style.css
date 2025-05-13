@@ -1,0 +1,300 @@
+/* General Styles */
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+  body {
+    
+  font-family: 'Your Font Name', sans-serif;
+    background-color: rgb(174, 32, 148);
+    color: #100f0f;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 0;
+  }
+  
+  /* Header Styles */
+ /* Make header background black */
+
+header {
+    background-color: #383636; /* black */
+    padding: 15px 0;
+    color: white;
+  }
+  
+  /* Make nav links white */
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  /* Optional: Change link color on hover */
+  .nav-links a:hover {
+    color: #f0c040; /* or any accent color you like */
+  }
+  
+  /* Style the logo text in white */
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  .logo img {
+    height: 45px; /* Adjust size as needed */
+    width: auto;
+    border-radius: 50%;
+  }
+  
+  .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-toggle {
+    color: white; /* make hamburger icon white */
+  }
+  
+  .main-heading {
+    background-color: #cccaca; /* black background */
+    color: rgb(123, 16, 16);
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+  
+  .main-heading h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  
+  .main-heading p {
+    font-size: 1.2rem;
+    color: #7b0606;
+  }
+  
+  
+  /* Flex container for header */
+  header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* About Section */
+  .about-section {
+    background-color: #fce2f4;
+    padding: 4rem 0;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #222;
+    text-align: center;
+  }
+  
+  
+  .about-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-align: center;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #444;
+  }
+  
+  /* Blog Section */
+  .blog-section {
+    background-color: #f5c5fb;
+    padding: 4rem 0;
+  }
+  
+  .blog-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #222;
+  }
+  
+  .blog-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .blog-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: #111;
+  }
+  
+  .blog-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .blog-card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+  }
+  
+  .blog-card a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Section */
+  .contact-section {
+    background-color: #393739;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #fefafa;
+  }
+  
+  .contact-section p {
+    font-size: 1rem;
+    color: #f0ebeb;
+    margin-bottom: 1.5rem;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .social-btn {
+    background-color: hsl(223, 78%, 51%);
+    color: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-btn:hover {
+    background-color: #3a25d8;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      background-color: #fff;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 200px;
+      display: none;
+      padding: 1rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .about-section, .blog-section, .contact-section {
+      padding: 2rem 1rem;
+    }
+  
+    .about-section h2, .blog-section h2, .contact-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .about-section p, .blog-card p, .contact-section p {
+      font-size: 0.95rem;
+    }
+  }
+/* Responsive navigation toggle */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Hide nav-links by default on small screens */
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+  
+    nav {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #fff;
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: none;
+      flex-direction: column;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      display: none;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  }
